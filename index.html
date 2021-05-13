@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>The Movie Database</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <section id="container">
+            <header class="navbar">
+                <a href="https://www.themoviedb.org">
+                    <img width="50" height="50" class="responsive-img" src="https://www.themoviedb.org/assets/static_cache/23e473036b28a59bd5dcfde9c671b1c5/images/v4/logos/312x276-primary-green.png" alt="logo TMDB">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="https://developers.themoviedb.org/3">Documentation API</a></li>
+                        <li><a href="https://www.themoviedb.org">The MovieDB</a></li>
+                    </ul>
+                </nav>
+                <form v-on:submit.prevent="searchMovie()">
+                    <label class="screen-reader" for="search">Rechercher</label>
+                    <input v-model="search" id="search" name="query" type="search" placeholder="Rechercher un film">
+                    <label for="lang">Langue</label>
+                    <select v-on:change="searchMovie(selectedPage)" v-model="lang" name="lang" id="lang">
+                        <option value="en-US">EN</option>
+                        <option value="fr-FR">FR</option>
+                    </select>
+                    <button class="button"><i class="fa fa-search"></i> Chercher</button>
+                </form>
+            </header>
+    
+            <main>
+                <section id="content">
+                    <header>
+                        <h2>Liste des films</h2>
+                        <p>Recherche pour <em>{{ search }}</em>
+                        <nav class="paginate" v-if="movies">
+                            <!-- Affichage de toutes les pages -->
+                            <ul>
+                                <li v-for="page in totalPages">
+                                    <a href="#" v-on:click.prevent="searchMovie(page)">Page {{ page }}</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </header>
+                    <ul v-if="movies" class="movie-list">
+                        <li v-for="movie in movies">
+                            <article>
+                                <header>
+                                    <h2>{{ movie.original_title }}</h2>
+                                    <small>{{ movie.release_date}} </small>
+                                </header>
+                                {{ movie.overview }}
+                                <figure>
+                                    <img class="responsive-img" v-bind:src="'https://image.tmdb.org/t/p/w500' + movie.poster_path" v-bind:alt="movie.original_title">
+                                </figure>
+                            </article>
+                        </li>
+                    </ul>
+                    <p v-else>Aucun résultat</p>
+                </section>
+            </main>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+@import 'https://fonts.googleapis.com/css?family=Amatic+SC|Dosis';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+	background: rgba(102,102,102,1);
+	background: -moz-linear-gradient(top, rgba(102,102,102,1) 0%, rgba(120,120,120,0.91) 12%, rgba(138,138,138,0.81) 25%, rgba(97,97,97,0.7) 39%, rgba(59,59,59,0.6) 51%, rgba(23,23,23,0.53) 60%, rgba(59,59,59,0.41) 76%, rgba(38,38,38,0.29) 91%, rgba(23,23,23,0.22) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(102,102,102,1)), color-stop(12%, rgba(120,120,120,0.91)), color-stop(25%, rgba(138,138,138,0.81)), color-stop(39%, rgba(97,97,97,0.7)), color-stop(51%, rgba(59,59,59,0.6)), color-stop(60%, rgba(23,23,23,0.53)), color-stop(76%, rgba(59,59,59,0.41)), color-stop(91%, rgba(38,38,38,0.29)), color-stop(100%, rgba(23,23,23,0.22)));
+	background: -webkit-linear-gradient(top, rgba(102,102,102,1) 0%, rgba(120,120,120,0.91) 12%, rgba(138,138,138,0.81) 25%, rgba(97,97,97,0.7) 39%, rgba(59,59,59,0.6) 51%, rgba(23,23,23,0.53) 60%, rgba(59,59,59,0.41) 76%, rgba(38,38,38,0.29) 91%, rgba(23,23,23,0.22) 100%);
+	background: -o-linear-gradient(top, rgba(102,102,102,1) 0%, rgba(120,120,120,0.91) 12%, rgba(138,138,138,0.81) 25%, rgba(97,97,97,0.7) 39%, rgba(59,59,59,0.6) 51%, rgba(23,23,23,0.53) 60%, rgba(59,59,59,0.41) 76%, rgba(38,38,38,0.29) 91%, rgba(23,23,23,0.22) 100%);
+	background: -ms-linear-gradient(top, rgba(102,102,102,1) 0%, rgba(120,120,120,0.91) 12%, rgba(138,138,138,0.81) 25%, rgba(97,97,97,0.7) 39%, rgba(59,59,59,0.6) 51%, rgba(23,23,23,0.53) 60%, rgba(59,59,59,0.41) 76%, rgba(38,38,38,0.29) 91%, rgba(23,23,23,0.22) 100%);
+	background: linear-gradient(to bottom, rgba(102,102,102,1) 0%, rgba(120,120,120,0.91) 12%, rgba(138,138,138,0.81) 25%, rgba(97,97,97,0.7) 39%, rgba(59,59,59,0.6) 51%, rgba(23,23,23,0.53) 60%, rgba(59,59,59,0.41) 76%, rgba(38,38,38,0.29) 91%, rgba(23,23,23,0.22) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#171717', GradientType=0 );
+	background-repeat: no-repeat;
+	font-family: 'Dosis', sans-serif;
+}
+
+#container {
+    width: 80%;
+    margin: 0 auto;
+    background: white;
+    padding: 0;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.7);
+}
+
+.navbar {
+	display: flex;
+	flex-wrap: wrap;
+	background: -webkit-linear-gradient(top, rgba(102,102,102,1) 0%, rgba(120,120,120,1) 0%, rgba(59,59,59,1) 0%, rgba(138,138,138,1) 2%, rgba(97,97,97,1) 7%, rgba(23,23,23,1) 60%, rgba(59,59,59,1) 76%, rgba(23,23,23,1) 100%);
+	background: -o-linear-gradient(top, rgba(102,102,102,1) 0%, rgba(120,120,120,1) 0%, rgba(59,59,59,1) 0%, rgba(138,138,138,1) 2%, rgba(97,97,97,1) 7%, rgba(23,23,23,1) 60%, rgba(59,59,59,1) 76%, rgba(23,23,23,1) 100%);
+	background: -ms-linear-gradient(top, rgba(102,102,102,1) 0%, rgba(120,120,120,1) 0%, rgba(59,59,59,1) 0%, rgba(138,138,138,1) 2%, rgba(97,97,97,1) 7%, rgba(23,23,23,1) 60%, rgba(59,59,59,1) 76%, rgba(23,23,23,1) 100%);
+	background: linear-gradient(to bottom, rgba(102,102,102,1) 0%, rgba(120,120,120,1) 0%, rgba(59,59,59,1) 0%, rgba(138,138,138,1) 2%, rgba(97,97,97,1) 7%, rgba(23,23,23,1) 60%, rgba(59,59,59,1) 76%, rgba(23,23,23,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#171717', GradientType=0 );
+	background-repeat: no-repeat;
+	padding: 2em;
+	align-items: center;
+}
+
+.navbar nav {
+	flex: 1;
+}
+
+.navbar nav ul{
+	display: flex;
+	list-style: none;
+	align-items: center;
+}
+
+.navbar nav ul li {
+	flex-basis: calc(100% / 3);
+}
+
+.navbar a {
+	color: white;
+	text-decoration: none;
+	transition: all 0.25s;
+}
+
+.navbar a:hover {
+	text-decoration: underline;
+	color: lightgrey;
+}
+
+.navbar a:visited {
+	color: silver;
+}
+
+.navbar form {
+	flex: 1;
+}
+
+.navbar input[type="search"] {
+  	border-radius: 40px;
+  	padding: 0.375em 1.25em;
+}
+
+.navbar button {
+	border-radius: 40px;
+	padding: 0.375em 1.25em;
+	transition: background-color 0.5s, box-shadow 0.25s;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.navbar button:hover {
+    background-color: lightgray;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+#content header {
+	text-align: center;
+}
+
+.screen-reader { 
+   clip: rect(1px, 1px, 1px, 1px); 
+   height: 1px; 
+   width: 1px; 
+   overflow: hidden; 
+   position: absolute !important;
+}
+
+ul.movie-list {
+	display: flex;
+	list-style: none;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+ul.movie-list li {
+	flex: 1 calc(100% / 3);
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+#content p em::first-letter {
+	text-transform: uppercase;
+}
+
+.responsive-img {
+	max-width: 100%;
+	height: auto;
+}
+
+ul.movie-list li img {
+	min-height: 0;
+	min-width: 0;
+}
+
+ul.movie-list li:last-child img, ul.movie-list li:last-child p {
+	align-self: flex-start;
+}
+
+header ul {
+	list-style:none;
+}
